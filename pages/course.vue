@@ -3,7 +3,11 @@
     <div class="row q-col-gutter-md">
       <div class="col-3">
         <q-card>
-          <q-item-label header>강의 로드맵</q-item-label>
+          <q-item-label header>
+            <NuxtLink to="/course">
+              강의 로드맵 {{ $hello('gymcoding') }}
+            </NuxtLink>
+          </q-item-label>
           <q-list bordered separator>
             <q-item
               v-for="(course, index) in courses"
@@ -16,15 +20,9 @@
                 {{ index + 1 }}. {{ course.title }}
               </q-item-section>
             </q-item>
-            <NuxtLink v-slot="{ navigate }" custom to="/course/prefetching-1">
-              <q-item clickable @click="navigate()">Prefetching Test 1</q-item>
-            </NuxtLink>
-            <NuxtLink v-slot="{ navigate }" custom to="/course/prefetching-2">
-              <q-item clickable @click="navigate()">Prefetching Test 2</q-item>
-            </NuxtLink>
-            <NuxtLink v-slot="{ navigate }" custom to="/course/prefetching-3">
-              <q-item clickable @click="navigate()">Prefetching Test 3</q-item>
-            </NuxtLink>
+            <q-item v-ripple clickable to="/course/empty">
+              <q-item-section> Empty Course (throw error) </q-item-section>
+            </q-item>
           </q-list>
         </q-card>
       </div>
@@ -37,4 +35,14 @@
 
 <script setup lang="ts">
 const { courses } = useCourses();
+const nuxtApp = useNuxtApp();
+
+// 1] $ 붙여서 사용
+console.log('nuxtApp.$hello: ', nuxtApp.$hello('gymcoding1'));
+
+// 2] 구조분해할당
+const { $hello } = nuxtApp;
+console.log('$hello: ', $hello('gymcoding2'));
 </script>
+
+<style scoped></style>

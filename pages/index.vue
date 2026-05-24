@@ -7,8 +7,7 @@
     <div class="row q-col-gutter-lg">
       <div
         v-for="{ courseSlug, thumbnail, title, subtitle, path } in courses" :key="courseSlug"
-        class="col-12 col-md-4 col-sm-6"
-      >
+        class="col-12 col-md-4 col-sm-6">
         <NuxtLink v-slot="{navigate}" custom :to="`/course/${courseSlug}`">
           <CourseCard
             :thumbnail="thumbnail"
@@ -24,4 +23,5 @@
 
 <script setup lang="ts">
 const { courses } = useCourses();
+
 </script>
