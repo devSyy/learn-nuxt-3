@@ -104,6 +104,7 @@ if (!course) {
   throw createError({
     statusCode: 404,
     statusMessage: 'Course not found',
+    //fatal: true
   });
 }
 
@@ -114,7 +115,7 @@ definePageMeta({
   // title: title.value, // 이렇게 하면 오류가 발생합니다.
   title: 'My home page',
   pageType: '',
-  keepalive: true,
+  // keepalive: true,
   alias: ['/lecture/:courseSlug'],
 });
 

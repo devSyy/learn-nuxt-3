@@ -3,8 +3,17 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   typescript: {
     typeCheck: false,
+    shim: false,
   },
   modules: ['nuxt-quasar-ui'],
+  quasar: {
+    plugins: ['Notify'],
+    config: {
+      notify: {
+        position: 'top-right',
+      }
+    },
+  },
   imports: {
     presets: [
       {
