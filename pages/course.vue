@@ -27,7 +27,14 @@
         </q-card>
       </div>
       <div class="col">
+        <NuxtErrorBoundary>
         <NuxtPage />
+        <template #error="{ error }">
+          <div class="flex flex-center column q-py-xl">
+            <div class="text-h6 q-mb-lg">{{ error }}</div>
+          </div>
+        </template>
+        </NuxtErrorBoundary>
       </div>
     </div>
   </q-page>

@@ -9,7 +9,7 @@
       </q-header>
       </template>
     <div class="q-my-xl text-center">
-      <div class="text-h4">레이아웃 재정의</div>
+      <PageTitle title="레이아웃 재정의"></PageTitle>
       <p class="q-mt-sm text-grey-8">Amdin Layout 실습을 위한 페이지입니다.</p>
     </div>
     </NuxtLayout>
