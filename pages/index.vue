@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
     <div class="q-my-xl text-center">
-      <PageTitle title="All Courses"/>
+      <PageTitle title="All Courses!"/>
       <PageDescription description="웹 개발 입문부터 실전까지"/>
     </div>
     <div class="row q-col-gutter-lg">

@@ -13,6 +13,7 @@
     "lint-prettier": "prettier --write \"**/*.(ts|tsx|vue|js|json)\""
   },
   "devDependencies": {
+    "@types/node": "^25.9.2",
     "nuxt": "^3.9.0",
     "nuxt-quasar-ui": "^3.0.0",
     "typescript": "^5.9.3",
