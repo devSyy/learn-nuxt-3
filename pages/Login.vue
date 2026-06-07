@@ -9,11 +9,14 @@
 </template>
 
 <script setup lang="ts">
+import { useAuthUser } from '~/composables/auth/useAuthUser';
+
 definePageMeta({
   middleware: ['guest-only'],
 });
 const handleLoginSuccess = async () => {
-  const {isAdmin} = useAuthUser();
+  // const { isAdmin } = useAuthUser();
+  const isAdmin = useAdmin();
   console.log(isAdmin.value);
   const redirect = isAdmin.value ? '/admin' : '/';
   await navigateTo(redirect);

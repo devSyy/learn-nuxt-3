@@ -1,8 +1,11 @@
 import type { UserWithoutPassword } from "~/types/user"
+import { useAuthUser } from "./useAuthUser";
+import { getUser } from "./userData";
 
 export const useAuth = () => {
   // const authUser = ref<Maybe<UserWithoutPassword>>(null);
-  const { authUser } = useAuthUser();
+  // const { authUser } = useAuthUser();
+  const authUser = useAuthUser();
 
 
   const signIn = (email: string, password: string) => {

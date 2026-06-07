@@ -21,6 +21,8 @@
 </template>
 
 <script setup lang="ts">
+import { useAuth } from '~/composables/auth/useAuth';
+
 const { signIn } = useAuth();
 const emit = defineEmits<{
   success: [];
