@@ -23,7 +23,9 @@
 <script setup lang="ts">
 import { useAuth } from '~/composables/auth/useAuth';
 
-const { signIn } = useAuth();
+// const { signIn } = useAuth();
+const { signIn } = useAuthStore();
+
 const emit = defineEmits<{
   success: [];
 }>();
